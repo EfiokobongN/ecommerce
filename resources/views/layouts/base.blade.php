@@ -28,6 +28,7 @@
         <main class="py-4">
             @yield('content')
         </main>
+        @include('layouts.footer')
     </div>
     <!-- Js Plugins -->
     <script src="{{ asset('assets/js/jquery-3.3.1.min.js') }}"></script>
