@@ -1,3 +1,6 @@
+<!-- Instagram Begin -->
+@include('components.social')
+
 <!-- Footer Section Begin -->
 <footer class="footer">
     <div class="container">
