@@ -31,22 +31,10 @@
                                 @endphp
                                 @foreach ($images as $image)
                                 <a class="pt active" href="#product-1">
-                                    <img src="{{ asset('img/product/details') }}/{{ $product->image }}" alt="{{ $product->name }}">
+                                    <img src="{{ asset('img/product/details') }}/{{ $image }}" alt="{{ $product->name }}">
                                 </a>
                                 @endforeach
                             @endif
-                            <a class="pt active" href="#product-1">
-                                <img src="img/product/details/thumb-1.jpg" alt="">
-                            </a>
-                            <a class="pt" href="#product-2">
-                                <img src="img/product/details/thumb-2.jpg" alt="">
-                            </a>
-                            <a class="pt" href="#product-3">
-                                <img src="img/product/details/thumb-3.jpg" alt="">
-                            </a>
-                            <a class="pt" href="#product-4">
-                                <img src="img/product/details/thumb-4.jpg" alt="">
-                            </a>
                         </div>
                         <div class="product__details__slider__content">
                             <div class="product__details__pic__slider owl-carousel">
