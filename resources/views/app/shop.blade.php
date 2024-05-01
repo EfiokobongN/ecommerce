@@ -32,7 +32,7 @@
                         @foreach ($products as $product)
                         <div class="col-lg-4 col-md-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="assets/img/shop/{{ $product->image }}">
+                                <div class="product__item__pic set-bg" data-setbg="{{ URL('assets/img/shop') }}/{{ $product->image }}">
                                     <div class="label new">{{ $product->category->name }}</div>
                                     <ul class="product__hover">
                                         <li><a href="{{ URL('assets/img/shop/shop-1.jpg') }}" class="image-popup"><span class="arrow_expand"></span></a></li>
