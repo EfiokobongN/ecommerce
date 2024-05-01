@@ -24,7 +24,7 @@ return new class extends Migration
             $table->boolean('featured')->default(false);
             $table->unsignedInteger('quantity')->default(1);
             $table->string('image');
-            $table->string('prod_images')->nullable();
+            $table->string('images')->nullable();
             $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('brand_id');
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');

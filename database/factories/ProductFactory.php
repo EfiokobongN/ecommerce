@@ -31,7 +31,7 @@ class ProductFactory extends Factory
         'stock_status' => 'instock',
         'quantity' => $this->faker->numberBetween(100,200),
         'image' => $image_name,
-        'prod_images' => $image_name,
+        'images' => $image_name,
         'category_id' => $this->faker->numberBetween(1,6),
         'brand_id' => $this->faker->numberBetween(1,6)
         ];
