@@ -20,7 +20,13 @@
 
     <!-- Product Details Section Begin -->
     <section class="product-details spad">
+        
         <div class="container">
+            @if (\Session::has('message'))
+                  <div class="alert alert-success">
+                    <p class="pt-2 pb-2">{{ \Session::get('message') }}</p>
+                  </div>  
+                @endif 
             <div class="row">
                 <div class="col-lg-6">
                     <div class="product__details__pic">
