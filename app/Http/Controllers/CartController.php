@@ -28,4 +28,16 @@ class CartController extends Controller
         Cart::instance('cart')->update($request->rowId, $request->quantity);
         return redirect()->back()->with('message', 'CartItem has been Updated Successfully');
     }
+
+    public function delete(Request $request)
+    {
+        $rowId = $request->rowId;
+        Cart::instance('cart')->remove($rowId);
+        return redirect()->back()->with('message', 'CartItem has been Removed Successfully');
+    }
+    public function clear()
+    {
+        Cart::instance('cart')->destroy();
+        return redirect()->back()->with('message', 'Cart has been Cleared Successfully');
+    }
 }

@@ -108,14 +108,14 @@
                                 <li>
                                     <span>Availability:</span>
                                     <div class="stock__checkbox">
-                                        <label for="stockin">
+                                        <label for="stock_status">
                                             @if ($product->stock_status =='instock')
                                             In Stock
                                             @else
                                             Out Of Stock
                                             @endif
                                             
-                                            <input type="checkbox" id="stockin">
+                                            <input type="checkbox" id="stock_status" name="stock_status">
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>

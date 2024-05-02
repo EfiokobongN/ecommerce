@@ -63,7 +63,11 @@
                                         </div>
                                     </td>
                                     <td class="cart__total">$ {{ $item->subtotal }}</td>
-                                    <td class="cart__close"><span class="icon_close"></span></td>
+
+                                    <td >
+                                        <a href="javascript:void(0)" class="cart__close" onclick="removeItemFromCart('{{ $item->rowId }}')"><span class="icon_close"></span>
+                                        </a>
+                                    </td>
                                 </tr>
                                 @endforeach
                             </tbody>
@@ -80,7 +84,7 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="cart__btn update__btn">
-                        <a href="#"><span class="icon_loading"></span> Update cart</a>
+                        <a href="javascript:void(0)" onclick="clearCart()"><span class="icon_loading"></span> Clear All Item</a>
                         
                     </div>
                 </div>
@@ -135,6 +139,17 @@
         <input type="hidden" id="rowId" name="rowId" >
         <input type="hidden" name="quantity" id="quantity">
     </form>
+
+    <form method="POST" action="{{ route('product.delete') }}" id="deleteFromCart">
+        @csrf
+        @method('delete')
+        <input type="hidden" id="rowId_D" name="rowId" >
+    </form>
+    <form method="POST" action="{{ route('product.clear') }}" id="clearCart">
+        @csrf
+        @method('delete')
+        <input type="hidden" id="rowId_D" name="rowId" >
+    </form>
 @endsection
 
 @push('scripts')
@@ -144,6 +159,15 @@
         $('#rowId').val($(qty).data('rowid'));
         $('#quantity').val($(qty).val());
         $('#updateCartQty').submit();
-    }      
+    }   
+    function removeItemFromCart(rowId) 
+     {
+        $('#rowId_D').val(rowId);
+        $('#deleteFromCart').submit();
+    }
+    function clearCart()
+    {
+        $('#clearCart').submit();
+    }
 </script>
 @endpush

@@ -17,6 +17,8 @@ Route::get('/product/{slug}', [ShopController::class, 'productDetails'])->name('
 Route::get('/shop/cart', [CartController::class, 'index'])->name('product.cart');
 Route::post('/cart/store', [CartController::class, 'store'])->name('product.store');
 Route::put('/cart/update', [CartController::class, 'update'])->name('product.update');
+Route::delete('/cart/delete', [CartController::class, 'delete'])->name('product.delete');
+Route::delete('/cart/clear', [CartController::class, 'clear'])->name('product.clear');
 
 Auth::routes();
 
