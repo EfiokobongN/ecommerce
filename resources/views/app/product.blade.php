@@ -24,7 +24,7 @@
         <div class="container">
             @if (\Session::has('message'))
                   <div class="alert alert-success">
-                    <p class="pt-2 pb-2">{{ \Session::get('message') }}</p>
+                    <p>{{ \Session::get('message') }}</p>
                   </div>  
                 @endif 
             <div class="row">

@@ -59,7 +59,7 @@
                                     <td class="cart__price">$ {{ $item->price }}</td>
                                     <td class="cart__quantity">
                                         <div class="pro-qty">
-                                            <input type="text" value="{{ $item->qty }}">
+                                            <input type="number" name="quantity" data-rowId="{{ $item->rowId }}" onchange="updateQuantity(this)" value="{{ $item->qty }}" class="input-number">
                                         </div>
                                     </td>
                                     <td class="cart__total">$ {{ $item->subtotal }}</td>
@@ -81,6 +81,7 @@
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="cart__btn update__btn">
                         <a href="#"><span class="icon_loading"></span> Update cart</a>
+                        
                     </div>
                 </div>
             </div>
@@ -127,4 +128,22 @@
        
     </section>
     <!-- Shop Cart Section End -->
+
+    <form method="POST" action="{{ route('product.update') }}" id="updateCartQty">
+        @csrf
+        @method('put')
+        <input type="hidden" id="rowId" name="rowId" >
+        <input type="hidden" name="quantity" id="quantity">
+    </form>
 @endsection
+
+@push('scripts')
+<script>
+    function updateQuantity(qty)
+    {
+        $('#rowId').val($(qty).data('rowid'));
+        $('#quantity').val($(qty).val());
+        $('#updateCartQty').submit();
+    }      
+</script>
+@endpush
