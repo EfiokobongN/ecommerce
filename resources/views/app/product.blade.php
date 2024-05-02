@@ -82,10 +82,16 @@
                             <div class="quantity">
                                 <span>Quantity:</span>
                                 <div class="pro-qty">
-                                    <input type="text" value="1">
+                                    <input type="text" value="{{ $product->qty }}">
                                 </div>
                             </div>
-                            <a href="#" class="cart-btn"><span class="icon_bag_alt"></span> Add to cart</a>
+                            <a href="javascript:void(0)" onclick="event.preventDefault();document.getElementById('addtocart').submit();" class="cart-btn"><span class="icon_bag_alt"></span> Add to cart
+                                <form method="POST" action="{{ route('product.store') }}" id="addtocart">
+                                    @csrf
+                                    <input type="hidden" name="id" value="{{ $product->id }}">
+                                    <input type="hidden" name="quantity" id="qty" value="1">
+                                </form>
+                            </a>
                             <ul>
                                 <li><a href="#"><span class="icon_heart_alt"></span></a></li>
                                 <li><a href="#"><span class="icon_adjust-horiz"></span></a></li>

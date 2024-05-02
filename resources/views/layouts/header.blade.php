@@ -126,8 +126,9 @@
                             <li><a href="#"><span class="icon_heart_alt"></span>
                                     <div class="tip">2</div>
                                 </a></li>
-                            <li><a href="#"><span class="icon_cart_alt"></span>
-                                    <div class="tip">2</div>
+
+                            <li><a href="{{ route('product.cart') }}"><span class="icon_cart_alt"></span>
+                                    <div class="tip">{{ Cart::instance('cart')->content()->count() }}</div>
                                 </a></li>
 
                         </ul>
