@@ -25,7 +25,8 @@ class CartController extends Controller
     }
     public function update(Request $request)
     {
-        Cart::instance('cart')->update($request->rowId, $request->quantity);
+        $rowId = $request->rowId;
+        Cart::instance('cart')->update($rowId, $request->quantity);
         return redirect()->back()->with('message', 'CartItem has been Updated Successfully');
     }
 

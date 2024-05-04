@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb__links">
-                        <a href="./index.html"><i class="fa fa-home"></i> Home</a>
+                        <a href="{{ route('app.index') }}"><i class="fa fa-home"></i> Home</a>
                         <span>Shop</span>
                     </div>
                 </div>
@@ -67,9 +67,25 @@
     <!-- Instagram Begin -->
     
     <!-- Instagram End -->
+
+    <form id="frmfliter" method="GET">
+        <input type="hidden" name="brands" id="brands" value="{{ $q_brands }}">
+    </form>
    
-
-
-    
-
 @endsection
+<script>
+    function filterProductsByBrand($brand)
+        {
+            var brands = "";
+            $("input[name='brands']:checked").each(function(){
+                if(brands == "")
+                {
+                    brands += this.value;
+                }else{
+                    brands += ";" + this.value;
+                }
+            });
+            $("#brands").val(brands);
+            $("#frmfliter").submit();
+        }
+</script>

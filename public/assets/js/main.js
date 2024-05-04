@@ -205,10 +205,10 @@ Created: Colorib
     /*-------------------
 		Quantity change
 	--------------------- */
-    var qty = $('.pro-qty');
-	qty.prepend('<span class="dec qtybtn">-</span>');
-	qty.append('<span class="inc qtybtn">+</span>');
-	qty.on('click', '.qtybtn', function () {
+    var proQty = $('.pro-qty');
+	proQty.prepend('<span class="dec qtybtn">-</span>');
+	proQty.append('<span class="inc qtybtn">+</span>');
+	proQty.on('click', '.qtybtn', function () {
 		var $button = $(this);
 		var oldValue = $button.parent().find('input').val();
 		if ($button.hasClass('inc')) {

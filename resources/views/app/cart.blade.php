@@ -56,13 +56,18 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="cart__price">$ {{ $item->price }}</td>
-                                    <td class="cart__quantity">
-                                        <div class="pro-qty">
-                                            <input type="number" name="quantity" data-rowId="{{ $item->rowId }}" onchange="updateQuantity(this)" value="{{ $item->qty }}" class="input-number">
-                                        </div>
-                                    </td>
-                                    <td class="cart__total">$ {{ $item->subtotal }}</td>
+                                  <td class="cart__price">$ {{ $item->price }}</td>
+
+                             
+                                <td class="cart__quantity">
+
+                                    <div class="pro-qty">
+                                        <input type="number" name="quantity" data-rowId="{{ $item->rowId }}" onchange="updateQuantity(this)" value="{{ $item->qty }}" class="input-number">
+                                    </div>
+                                </td>
+
+
+                             <td class="cart__total">$ {{ $item->subtotal }}</td>
 
                                     <td >
                                         <a href="javascript:void(0)" class="cart__close" onclick="removeItemFromCart('{{ $item->rowId }}')"><span class="icon_close"></span>

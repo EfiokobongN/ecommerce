@@ -195,9 +195,16 @@
 </nav>
 @endif
 
+<td class="cart__quantity">
 
-
-
+            
+            <label for="brand">
+                {{ $brand->name }} <span>({{ $brand->products->count() }})</span>
+                <input class="checkmark" type="checkbox" name="brands" 
+                @if(in_array($brand->id,explode(',',$q_brands))) checked="checked" @endif
+                 id="{{ $brand->id }}" value="{{ $brand->id }}" onchange="filterProductsByBrand(this)"
+                 >
+            </label>
 
 
 

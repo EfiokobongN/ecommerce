@@ -42,10 +42,6 @@
     <script src="{{ asset('assets/js/jquery.nicescroll.min.js') }}"></script>
     <script src="{{ asset('assets/js/main.js') }}"></script>
     <script>
-        $(function() {
-            $([data-bs-toggle="tooltip"]).tooltip()
-        });
-    </script>
     @stack('scripts')
 </body>
 

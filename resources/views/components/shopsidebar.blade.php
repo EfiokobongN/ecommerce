@@ -5,33 +5,15 @@
     <div class="sidebar__sizes">
         <div class="section-title">
             <h4>Shop by Brands</h4>
+            <span class="checkmark"></span>
+
         </div>
-        <div class="size__list">
-            <label for="xxs">
-                Nike
-                <input type="checkbox" id="xxs">
-                <span class="checkmark"></span>
-            </label>
-            <label for="xs">
-                Amazon
-                <input type="checkbox" id="xs">
-                <span class="checkmark"></span>
-            </label>
-            <label for="xss">
-                Jumian
-                <input type="checkbox" id="xss">
-                <span class="checkmark"></span>
-            </label>
-            <label for="s">
-                Maestitise
-                <input type="checkbox" id="s">
-                <span class="checkmark"></span>
-            </label>
-            <label for="m">
-                Union
-                <input type="checkbox" id="m">
-                <span class="checkmark"></span>
-            </label>
+        <div class="size__lists">
+            @foreach ($brands as $brand)
+            <label for="brands">{{ $brand->name }} <span>({{ $brand->products->count() }})</span></label><br>
+            <input type="checkbox" name="brands" @if(in_array($brand->id,explode(',', $q_brands))) checked="checked" @endif id="{{ $brand->id }}" value="{{ $brand->id }}" onchange="filterProductsByBrand(this)">
+             @endforeach
+
         </div>
     </div>
 
@@ -136,7 +118,7 @@
         </div>
         <div class="filter-range-wrap">
             <div class="price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
-            data-min="33" data-max="99"></div>
+            data-min="20" data-max="500"></div>
             <div class="range-slider">
                 <div class="price-input">
                     <p>Price:</p>
