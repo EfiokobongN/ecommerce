@@ -11,7 +11,7 @@
         <div class="size__lists">
             @foreach ($brands as $brand)
             <label for="brands">{{ $brand->name }} <span>({{ $brand->products->count() }})</span></label><br>
-            <input type="checkbox" name="brands" @if(in_array($brand->id,explode(',', $q_brands))) checked="checked" @endif id="{{ $brand->id }}" value="{{ $brand->id }}" onchange="filterProductsByBrand(this)">
+            <input type="checkbox" class="checkmark" name="brands" @if(in_array($brand->id,explode(',', $q_brands))) checked="checked" @endif id="{{ $brand->id }}" value="{{ $brand->id }}" onchange="filterProductsByBrand(this)">
              @endforeach
 
         </div>
