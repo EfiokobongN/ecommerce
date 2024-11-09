@@ -16,14 +16,13 @@ Route::get('/run-migrate', function () {
    try {
        // Clear cache and optimize
        Artisan::call('route:cache');
+       Artisan::call('cache:table');
        Artisan::call('config:cache');
        Artisan::call('optimize:clear');
 
        
        // Run migrations and seed the database
-       //Artisan::call('migrate:fresh', [
-         //  '--seed' => true,
-       //]);
+       Artisan::call('migrate:fresh');
 
        return "Migration and Seeding Executed Successfully";
    } catch (\Exception $e) {

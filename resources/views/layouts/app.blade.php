@@ -13,14 +13,14 @@
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
     <!-- Css Styles -->
-    <link rel="stylesheet" href="{{ asset('public/assets/css/bootstrap.min.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{ asset('public/assets/css/font-awesome.min.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{ asset('public/assets/css/elegant-icons.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{ asset('public/assets/css/jquery-ui.min.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{ asset('public/assets/css/magnific-popup.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{ asset('public/assets/css/owl.carousel.min.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{ asset('public/assets/css/slicknav.min.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{ asset('public/assets/css/style.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('assets/css/elegant-icons.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('assets/css/jquery-ui.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('assets/css/slicknav.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" type="text/css">
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -87,15 +87,15 @@
     </div>
 
     <!-- Js Plugins -->
-    <script src="{{ asset('public/assets/js/jquery-3.3.1.min.js') }}"></script>
-    <script src="{{ asset('public/assets/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('public/assets/js/jquery.magnific-popup.min.js') }}"></script>
-    <script src="{{ asset('public/assets/js/jquery-ui.min.js') }}"></script>
-    <script src="{{ asset('public/assets/js/mixitup.min.js') }}"></script>
-    <script src="{{ asset('public/assets/js/jquery.countdown.min.js') }}"></script>
-    <script src="{{ asset('public/assets/js/jquery.slicknav.js') }}"></script>
-    <script src="{{ asset('public/assets/js/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('public/assets/js/jquery.nicescroll.min.js') }}"></script>
-    <script src="{{ asset('public/assets/js/main.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery-ui.min.js') }}"></script>
+    <script src="{{ asset('assets/js/mixitup.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.countdown.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.slicknav.js') }}"></script>
+    <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.nicescroll.min.js') }}"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
 </body>
 </html>
